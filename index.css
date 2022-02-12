@@ -1,0 +1,8 @@
+@import url(https://myui-0.netlify.app/static/css/root.css);
+
+@import "./pages/auth/auth.css";
+
+.headerName {
+  text-decoration: none;
+  color: inherit;
+}
