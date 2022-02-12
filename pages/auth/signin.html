@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <header class="RuiPaper RuiAppbar RuiAppBar--positionFixed RuiAppBar--colorPrimary RuiPaper--elevation3">
+        <div class="RuiToolbar RuiToolbar--regular RuiToolbar--gutters">
+
+            <button class="RuiButtonBase RuiIconButton RuiIconButton--colorInherit mr-5">
+                <span class="RuiIconButton__Label">
+                    <span class="RuiIconButton__Icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </span>
+            </button>
+            <a href="/" class="headerName">
+                <h3 class="RuiTypography__h3 mt-2">E-comm</h3>
+            </a>
+
+            <div class="ml-auto">
+                <a class="RuiButtonBase RuiButton RuiButton--contained RuiButton--textSizeSmall" href="#">
+                    <span class="RuiButton__label">Sign up</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="centered">
+        <div class="RuiPaper RuiPaper--elevation3 RuiPaper--rounded loginPage">
+            <div class="RuiPaper__content">
+                <div class="RuiPaper__header">
+                    <h1 class="RuiTypography__h1">Sign In</h1>
+                </div>
+                <div class="RuiPaper__body">
+                    <form action="login.php" method="post">
+                        <div class="RuiForm__group">
+                            <label for="email" class="RuiForm__label">Email</label>
+                            <input type="email" name="email" id="email" class="RuiForm__input" required>
+                        </div>
+                        <div class="RuiForm__group">
+                            <label for="password" class="RuiForm__label">Password</label>
+                            <input type="password" name="password" id="password" class="RuiForm__input" required>
+                        </div>
+                        <div class="RuiForm__group">
+                            <p class="RuiTypography__body2">Don't have an account? <a href="./signup.html">Sign Up</a>
+                            </p>
+                            <button
+                                class="RuiButton RuiButton--contained RuiButton--containedPrimary RuiButton--textSizeSmall">
+                                <span class="RuiButton__label">Log In</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

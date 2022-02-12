@@ -1,0 +1,46 @@
+.centered {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPage {
+  width: 36rem;
+  padding: 1.6rem;
+}
+
+.RuiPaper__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.RuiForm__group {
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.RuiForm__group input {
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+  outline: none;
+  padding: 0.4rem;
+  width: 100%;
+}
+
+.RuiForm__group button {
+  outline: none;
+  border: none;
+}
+
+.RuiForm__group a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.RuiForm__group:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
