@@ -1,27 +1,27 @@
-.centered {
-  height: 100vh;
+.authCenter {
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.loginPage {
+.authCard {
   width: 36rem;
   padding: 1.6rem;
 }
 
-.RuiPaper__header {
+.authCard__header {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
 }
 
-.RuiForm__group {
+.authCardForm__group {
   margin-bottom: 1.6rem;
   font-size: 1.6rem;
 }
 
-.RuiForm__group input {
+.authCardForm__group input {
   font-size: 1.6rem;
   border-radius: 0.4rem;
   outline: none;
@@ -29,17 +29,22 @@
   width: 100%;
 }
 
-.RuiForm__group button {
+.authFooter__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.authCardForm__group button {
   outline: none;
   border: none;
 }
 
-.RuiForm__group a {
+.authCardForm__group a {
   text-decoration: none;
   font-size: 1.6rem;
 }
 
-.RuiForm__group:last-child {
+.authCardForm__group:last-child {
   display: flex;
   justify-content: space-between;
   align-items: center;

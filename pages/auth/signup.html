@@ -10,56 +10,54 @@
 </head>
 
 <body>
-    <header class="RuiPaper RuiAppbar RuiAppBar--positionFixed RuiAppBar--colorPrimary RuiPaper--elevation3">
-        <div class="RuiToolbar RuiToolbar--regular RuiToolbar--gutters">
+    <header class="RuiPaper RuiAppbar RuiAppBar--positionSticky RuiAppBar--colorPrimary RuiPaper--elevation3">
+        <div class="RuiContainer RuiContainer--xl">
+            <div class="RuiToolbar RuiToolbar--regular RuiToolbar--gutters eHeader">
+                <div class="eHeader__content">
+                    <h3 class="RuiTypography__h3 mt-2">E-comm</h3>
+                </div>
 
-            <button class="RuiButtonBase RuiIconButton RuiIconButton--colorInherit mr-5">
-                <span class="RuiIconButton__Label">
-                    <span class="RuiIconButton__Icon">
-                        <i class="fas fa-bars"></i>
-                    </span>
-                </span>
-            </button>
-            <a href="/" class="headerName">
-                <h3 class="RuiTypography__h3 mt-2">E-comm</h3>
-            </a>
-
-            <div class="ml-auto">
-                <a class="RuiButtonBase RuiButton RuiButton--contained RuiButton--textSizeSmall" href="#">
-                    <span class="RuiButton__label">Log in</span>
-                </a>
+                <div class="eHeader__action">
+                    <a class="RuiButtonBase RuiButton RuiButton--contained RuiButton--textSizeSmall RuiButton--textPrimary m-2"
+                        href="./signin.html">
+                        <span class="RuiButton__label">Sign in</span>
+                    </a>
+                </div>
             </div>
-
         </div>
     </header>
 
-    <div class="centered">
-        <div class="RuiPaper RuiPaper--elevation3 RuiPaper--rounded loginPage">
-            <div class="RuiPaper__content">
-                <div class="RuiPaper__header">
+    <div class="authCenter">
+        <div class="RuiPaper RuiPaper--elevation3 RuiPaper--rounded authCard">
+            <div>
+                <div class="authCard__header">
                     <h1 class="RuiTypography__h1">Sign Up</h1>
                 </div>
-                <div class="RuiPaper__body">
+                <div>
                     <form action="login.php" method="post">
-                        <div class="RuiForm__group">
-                            <label for="name" class="RuiForm__label">Email</label>
-                            <input type="text" name="name" id="name" class="RuiForm__input" required>
+                        <div class="authCardForm__group">
+                            <label for="name" class="RuiForm__label">Name</label>
+                            <input type="text" name="name" id="name" required>
                         </div>
-                        <div class="RuiForm__group">
+                        <div class="authCardForm__group">
                             <label for="email" class="RuiForm__label">Email</label>
-                            <input type="email" name="email" id="email" class="RuiForm__input" required>
+                            <input type="email" name="email" id="email" required>
                         </div>
-                        <div class="RuiForm__group">
+                        <div class="authCardForm__group">
                             <label for="password" class="RuiForm__label">Password</label>
-                            <input type="password" name="password" id="password" class="RuiForm__input" required>
+                            <input type="password" name="password" id="password" required>
                         </div>
-                        <div class="RuiForm__group">
+                        <div class="authCardForm__group">
                             <label for="c-password" class="RuiForm__label">Confirm Password</label>
-                            <input type="password" name="c-password" id="c-password" class="RuiForm__input" required>
+                            <input type="password" name="c-password" id="c-password" required>
                         </div>
-                        <div class="RuiForm__group">
-                            <p class="RuiTypography__body2">Already have an account? <a href="./signin.html">Sign In</a>
-                            </p>
+                        <div class="authCardForm__group">
+                            <div class="authFooter__content">
+                                <p class="RuiTypography__body2">Don't have an account? <a href="./signin.html">Sign
+                                        In</a>
+                                </p>
+                                <a href="/">Home Page</a>
+                            </div>
                             <button
                                 class="RuiButton RuiButton--contained RuiButton--containedPrimary RuiButton--textSizeSmall">
                                 <span class="RuiButton__label">Sign up</span>
@@ -70,8 +68,6 @@
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
