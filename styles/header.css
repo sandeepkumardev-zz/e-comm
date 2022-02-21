@@ -1,0 +1,62 @@
+.eHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.eHeader__content {
+  display: flex;
+  align-items: center;
+}
+.eHeader__content h3 {
+  white-space: nowrap;
+}
+.eHeader__content .RuiButtonBase {
+  display: none;
+}
+.eHeader__searchBar {
+  max-width: 60rem;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+.eHeader__searchBar--after {
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: none;
+}
+.eHeader__searchBar--after {
+  margin: 0;
+  border-radius: 0;
+}
+.eHeader__action {
+  display: flex;
+  align-items: center;
+}
+.eHeader__action .RuiButton {
+  font-weight: 700;
+  background-color: var(--secondary-color);
+}
+.eHeader__action--icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+.eHeader__action .RuiBadge__badge {
+  background-color: var(--accent-color);
+}
+
+@media screen and (max-width: 600px) {
+  .eHeader__content .RuiButtonBase {
+    display: block;
+  }
+  .eHeader__searchBar {
+    display: none;
+  }
+  .eHeader__searchBar--after {
+    display: flex;
+  }
+}
+@media screen and (max-width: 350px) {
+  .eHeader__action--icons {
+    display: none;
+  }
+}
