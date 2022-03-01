@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <header class="RuiPaper RuiAppbar RuiAppBar--positionSticky RuiAppBar--colorPrimary RuiPaper--elevation3">
+        <div class="RuiContainer RuiContainer--xl">
+            <div class="RuiToolbar RuiToolbar--regular RuiToolbar--gutters RuiAppBar__search">
+                <div class="RuiAppBar__search__content">
+                    <button onclick="showDrawerModel()" id="RuiNavToggle"
+                        class="RuiButtonBase RuiIconButton RuiIconButton--colorInherit mr-5 RuiToggle">
+                        <span class="RuiIconButton__Label">
+                            <span class="RuiIconButton__Icon">
+                                <i class="fas fa-bars"></i>
+                            </span>
+                        </span>
+                    </button>
+                    <h3 class="RuiTypography__h3 mt-2">E-comm</h3>
+                </div>
+
+                <div class="RuiTextField RuiTextField__search RuiAppBar__search__searchBar">
+                    <input type="text" name="input" class="RuiInputBase RuiInput px-2" placeholder="Search">
+                    <button class="RuiButtonBase RuiIconButton RuiInput__searchIcon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="RuiAppBar__search__action">
+                    <a class="RuiButtonBase RuiButton RuiButton--contained RuiButton--textSizeSmall RuiButton--textPrimary m-2"
+                        href="./pages/auth/signin.html">
+                        <span class="RuiButton__label">Log in</span>
+                    </a>
+                    <div class="RuiAppBar__search__action--icons">
+                        <a href="../wishlist" class="RuiButtonBase RuiIconButton RuiIconButton--colorInherit">
+                            <div class="RuiBadge">
+                                <span class="RuiBadge__Icon"><i class="far fa-heart"></i></span>
+                                <span class="RuiBadge__badge RuiBadge__badge--anchorOriginTopRight">5</span>
+                            </div>
+                        </a>
+                        <a href="../cart" class="RuiButtonBase RuiIconButton RuiIconButton--colorInherit">
+                            <div class="RuiBadge">
+                                <span class="RuiBadge__Icon"><i class="fas fa-baby-carriage"></i></span>
+                                <span class="RuiBadge__badge RuiBadge__badge--anchorOriginTopRight">10</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="RuiTextField RuiTextField__search RuiAppBar__search__searchBar--after">
+                <input type="text" name="input" class="RuiInputBase RuiInput px-2" placeholder="Search">
+                <button class="RuiButtonBase RuiIconButton RuiInput__searchIcon">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="RuiContainer RuiContainer--xl">
+        <div class="RuiNav__grid">
+            <div id="RuiNav--left" class="RuiNav--borderRight">
+                <div class="RuiDrawer">
+                    <div class="eNavFilter">
+                        <h4 class="RuiTypography__h4">Filters</h4>
+                        <a href="#">
+                            <p class="RuiTypography__body1">Clear</p>
+                        </a>
+                    </div>
+
+                    <div class="eNavPrice">
+                        <h4 class="RuiTypography__h4">Price</h4>
+                        <div class="eNavPrice__value">
+                            <span class="RuiTypography__body2">50</span>
+                            <span class="RuiTypography__body2">100</span>
+                            <span class="RuiTypography__body2">200</span>
+                        </div>
+                        <input type="range" list="tickmarks">
+                        <datalist id="tickmarks">
+                            <option value="50" label="0%"></option>
+                            <option value="100" label="50%"></option>
+                            <option value="200" label="100%"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="eNavCategory">
+                        <h4 class="RuiTypography__h4">Category</h4>
+                        <span>
+                            <input type="checkbox" name="man">
+                            <label class="RuiTypography__body2" for="man">Man clothing</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="women">
+                            <label class="RuiTypography__body2" for="women">Woman clothing</label>
+                        </span>
+                    </div>
+
+
+                    <div class="eNavRating">
+                        <h4 class="RuiTypography__h4">Rating</h4>
+                        <span>
+                            <input type="radio" name="4star">
+                            <label class="RuiTypography__body2" for="4star">4 stars & above</label>
+                        </span>
+                        <span>
+                            <input type="radio" name="3star">
+                            <label class="RuiTypography__body2" for="3star">3 stars & above</label>
+                        </span>
+                        <span>
+                            <input type="radio" name="2star">
+                            <label class="RuiTypography__body2" for="2star">2 stars & above</label>
+                        </span>
+                        <span>
+                            <input type="radio" name="1star">
+                            <label class="RuiTypography__body2" for="1star">1 stars & above</label>
+                        </span>
+                    </div>
+
+                    <div class="eNavSort">
+                        <h4 class="RuiTypography__h4">Sort by</h4>
+                        <span>
+                            <input type="radio" name="LtoH">
+                            <label class="RuiTypography__body2" for="LtoH">Low to High</label>
+                        </span>
+                        <span>
+                            <input type="radio" name="HtoL">
+                            <label class="RuiTypography__body2" for="HtoL">High to Low</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="RuiMain" class="p-5 mt-5">
+                <div class="eMainHeader">
+                    <H4 class="RuiTypography__h4">Showing All Products</H4>
+                    <p class="RuiTypography__body2 ml-2"> (Showing 20 Products)</p>
+                </div>
+
+                <div class="eMainProducts mt-5 pt-5">
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained RuiButton--containedPrimary m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="RuiPaper RuiCard RuiPaper--elevation1 RuiPaper--rounded RuiCard--positionRelative">
+                        <div class="RuiAvatar m-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <a class="RuiButtonBase RuiCard__Action__Area">
+                            <img class="RuiCard__media RuiCard__media--img" src="../../static/image/cardpic.png" alt="">
+
+                            <div class="RuiCard__content">
+                                <p class="RuiTypography__body1">Men Premium Jacket</p>
+                                <h4 class="RuiTypography__h4">₹2000</h4>
+                            </div>
+                        </a>
+                        <div class="RuiCard__actions">
+                            <a href="../cart"
+                                class="RuiButtonBase RuiButton--textSizeSmall RuiButton RuiButton--contained bg-gray m-2">
+                                <span class="RuiButton__label">Go to Cart</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="RuiDrawer__model" id="toggleRuiDrawerModel">
+        <div class="RuiBackdrop" onclick="closeDrawerModel()"></div>
+        <div class="RuiModel__content">
+            <div class="RuiDrawer">
+                <div class="RuiDrawer__header mb-2 pb-2">
+                    <h2 class="RuiTypography__h2 RuiTypography--colorTextPrimary mt-1">E-comm</h2>
+                    <button onclick="closeDrawerModel()" class="RuiButtonBase RuiIconButton RuiTypography--colorDanger">
+                        <span class="RuiIconButton__Label">
+                            <span class="RuiIconButton__Icon">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="eNavFilter">
+                    <h4 class="RuiTypography__h4">Filters</h4>
+                    <a href="#">
+                        <p class="RuiTypography__body1">Clear</p>
+                    </a>
+                </div>
+
+                <div class="eNavPrice">
+                    <h4 class="RuiTypography__h4">Price</h4>
+                    <div class="eNavPrice__value">
+                        <span class="RuiTypography__body2">50</span>
+                        <span class="RuiTypography__body2">100</span>
+                        <span class="RuiTypography__body2">200</span>
+                    </div>
+                    <input type="range" list="tickmarks">
+                    <datalist id="tickmarks">
+                        <option value="50" label="0%"></option>
+                        <option value="100" label="50%"></option>
+                        <option value="200" label="100%"></option>
+                    </datalist>
+                </div>
+
+                <div class="eNavCategory">
+                    <h4 class="RuiTypography__h4">Category</h4>
+                    <span>
+                        <input type="checkbox" name="man">
+                        <label class="RuiTypography__body2" for="man">Man clothing</label>
+                    </span>
+                    <span>
+                        <input type="checkbox" name="women">
+                        <label class="RuiTypography__body2" for="women">Woman clothing</label>
+                    </span>
+                </div>
+
+
+                <div class="eNavRating">
+                    <h4 class="RuiTypography__h4">Rating</h4>
+                    <span>
+                        <input type="radio" name="4star">
+                        <label class="RuiTypography__body2" for="4star">4 stars & above</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="3star">
+                        <label class="RuiTypography__body2" for="3star">3 stars & above</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="2star">
+                        <label class="RuiTypography__body2" for="2star">2 stars & above</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="1star">
+                        <label class="RuiTypography__body2" for="1star">1 stars & above</label>
+                    </span>
+                </div>
+
+                <div class="eNavSort">
+                    <h4 class="RuiTypography__h4">Sort by</h4>
+                    <span>
+                        <input type="radio" name="LtoH">
+                        <label class="RuiTypography__body2" for="LtoH">Low to High</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="HtoL">
+                        <label class="RuiTypography__body2" for="HtoL">High to Low</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://myui-0.netlify.app/static/js/toggleSidebar.js"></script>
+
+</html>

@@ -1,0 +1,90 @@
+.eNavFilter {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eNavPrice {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.eNavPrice__value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eNavRating,
+.eNavSort,
+.eNavCategory {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.eNavRating span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eNavSort span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eNavCategory span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eMainHeader {
+  display: flex;
+  align-items: baseline;
+}
+
+.eMainProducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1rem;
+}
+
+.eMainProducts .RuiCard {
+  max-width: none;
+  min-width: initial;
+}
+
+.eMainProducts .RuiCard__media--img {
+  object-fit: contain;
+}
+.eMainProducts .RuiCard__content {
+  padding: 1rem;
+  text-align: center;
+}
+.eMainProducts .RuiCard__content h4 {
+  font-weight: bold;
+}
+.eMainProducts .RuiCard__actions {
+  padding: 0;
+}
+.eMainProducts .RuiCard__actions .RuiButton {
+  margin: 0;
+  border-radius: 0;
+  width: 100%;
+  color: #fff;
+}
+.eMainProducts .RuiAvatar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  cursor: pointer;
+}
+.eMainProducts .RuiAvatar i {
+  color: red;
+}
