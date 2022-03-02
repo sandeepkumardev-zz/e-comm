@@ -1,0 +1,68 @@
+.eHome__ProductCategoryList {
+  margin: 3rem 2rem;
+  overflow: auto;
+  white-space: nowrap;
+  gap: 2rem;
+}
+.eHome__ProductCategoryList::-webkit-scrollbar {
+  display: none;
+}
+.eHome__Product {
+  display: inline-block;
+  height: 15rem;
+  position: relative;
+  margin-right: 1rem;
+}
+.eHome__Product img {
+  overflow: hidden;
+}
+.eHome__product__title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  color: #3c03b1;
+  text-align: center;
+}
+
+.eHomeSlider__card {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.eHomeSlider__card a {
+  text-decoration: none;
+}
+.eHomeSlider__card p {
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+.eHomeSlider__card .eCart__cardBody {
+  margin-bottom: 2rem;
+  width: 170px;
+  position: relative;
+}
+.eHomeSlider__card .eCart__cardBody__title {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: justify;
+}
+@media screen and (max-width: 500px) {
+  .eHomeSlider__card .eCart__card {
+    width: 100%;
+  }
+  .eHomeSlider__card .eCart__cardBody {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+  }
+  .eHomeSlider__card .eCart__cardBody__title {
+    position: static;
+  }
+}
