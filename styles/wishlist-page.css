@@ -1,0 +1,46 @@
+.eWishHeader__title {
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.eWishProducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 1rem;
+  margin: 2rem;
+}
+.eWishProducts .RuiCard {
+  max-width: none;
+  min-width: initial;
+}
+
+.eWishProducts .RuiCard__media--img {
+  object-fit: contain;
+}
+.eWishProducts .RuiCard__content {
+  padding: 1rem;
+  text-align: center;
+}
+.eWishProducts .RuiCard__content h4 {
+  font-weight: bold;
+}
+.eWishProducts .RuiCard__actions {
+  padding: 0;
+}
+.eWishProducts .RuiCard__actions .RuiButton {
+  margin: 0;
+  border-radius: 0;
+  width: 100%;
+  color: #fff;
+}
+.eWishProducts .RuiAvatar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  cursor: pointer;
+}
+.eWishProducts .RuiAvatar .fas {
+  color: red;
+}
