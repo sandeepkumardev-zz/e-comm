@@ -85,6 +85,6 @@
   background-color: #fff;
   cursor: pointer;
 }
-.eMainProducts .RuiAvatar i {
+.eMainProducts .RuiAvatar .fas {
   color: red;
 }
