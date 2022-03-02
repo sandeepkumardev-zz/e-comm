@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="../../index.css">
+</head>
+
+<body>
+    <header class="RuiPaper RuiAppbar RuiAppBar--positionSticky RuiAppBar--colorPrimary RuiPaper--elevation3">
+        <div class="RuiContainer RuiContainer--xl">
+            <div class="RuiToolbar RuiToolbar--regular RuiToolbar--gutters RuiAppBar__search">
+                <div class="RuiAppBar__search__content">
+                    <h3 class="RuiTypography__h3 mt-2">E-comm</h3>
+                </div>
+
+                <div class="RuiTextField RuiTextField__search RuiAppBar__search__searchBar">
+                    <input type="text" name="input" class="RuiInputBase RuiInput px-2" placeholder="Search">
+                    <button class="RuiButtonBase RuiIconButton RuiInput__searchIcon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="RuiAppBar__search__action">
+                    <a class="RuiButtonBase RuiButton RuiButton--contained RuiButton--textSizeSmall RuiButton--textPrimary m-2"
+                        href="./pages/auth/signin.html">
+                        <span class="RuiButton__label">Log in</span>
+                    </a>
+                    <div class="RuiAppBar__search__action--icons">
+                        <a href="../wishlist" class="RuiButtonBase RuiIconButton RuiIconButton--colorInherit">
+                            <div class="RuiBadge">
+                                <span class="RuiBadge__Icon"><i class="far fa-heart"></i></span>
+                                <span class="RuiBadge__badge RuiBadge__badge--anchorOriginTopRight">5</span>
+                            </div>
+                        </a>
+                        <a href="../cart" class="RuiButtonBase RuiIconButton RuiIconButton--colorInherit">
+                            <div class="RuiBadge">
+                                <span class="RuiBadge__Icon"><i class="fas fa-baby-carriage"></i></span>
+                                <span class="RuiBadge__badge RuiBadge__badge--anchorOriginTopRight">10</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="RuiTextField RuiTextField__search RuiAppBar__search__searchBar--after">
+                <input type="text" name="input" class="RuiInputBase RuiInput px-2" placeholder="Search">
+                <button class="RuiButtonBase RuiIconButton RuiInput__searchIcon">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="RuiContainer RuiContainer--xl">
+        <div class="eCartHeader__title">
+            <h1>My Cart (2)</h1>
+        </div>
+
+
+        <div class="eCartItems">
+            <div class="eCartProductList">
+                <div class="RuiPaper eCart__card RuiPaper--elevation1 RuiPaper--rounded RuiCard--horizontal">
+                    <div class="eCart__cardImage">
+                        <img src="../../static/image/cardpic.png" alt="" height="100%">
+                    </div>
+
+                    <div class="eCart__cardBody">
+                        <div class="eCart__cardContent">
+                            <div class="eCart__cardBody__title">
+                                <h3 class="RuiTypography__h3">Men Premium Jacket</h3>
+                            </div>
+                            <div class="eCart__cardBody__price">
+                                <h3 class="RuiTypography__h3">₹1000</h3>
+                                <span class="RuiTypography__body2 RuiTypography--colorTextSecondary">₹1500</span>
+                            </div>
+                            <div class="eCart__cardBody__quantity">
+                                <div class="eCart__cardBody__quantity__input">
+                                    <label for="quantity" class="RuiTypography__body2">Quantity - </label>
+                                    <input type="number" name="quantity" value="1" min="1" max="10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="eCart__cardAction">
+                            <button
+                                class="RuiButtonBase RuiButton RuiButton--contained RuiButton--containedSecondary RuiButton--textSizeSmall m-2">
+                                <span class="RuiButton__label">Remove From Cart</span>
+                            </button>
+                            <button
+                                class="RuiButtonBase RuiButton RuiButton--outlined RuiButton--outlinedPrimary RuiButton--textSizeSmall m-2">
+                                <span class="RuiButton__label">Move to wishlist</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="RuiPaper eCart__card RuiPaper--elevation1 RuiPaper--rounded RuiCard--horizontal">
+                    <div class="eCart__cardImage">
+                        <img src="../../static/image/cardpic.png" alt="" height="100%">
+                    </div>
+
+                    <div class="eCart__cardBody">
+                        <div class="eCart__cardContent">
+                            <div class="eCart__cardBody__title">
+                                <h3 class="RuiTypography__h3">Men Premium Jacket</h3>
+                            </div>
+                            <div class="eCart__cardBody__price">
+                                <h3 class="RuiTypography__h3">₹1000</h3>
+                                <span class="RuiTypography__body2 RuiTypography--colorTextSecondary">₹1500</span>
+                            </div>
+                            <div class="eCart__cardBody__quantity">
+                                <div class="eCart__cardBody__quantity__input">
+                                    <label for="quantity" class="RuiTypography__body2">Quantity - </label>
+                                    <input type="number" name="quantity" value="1" min="1" max="10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="eCart__cardAction">
+                            <button
+                                class="RuiButtonBase RuiButton RuiButton--contained RuiButton--containedSecondary RuiButton--textSizeSmall m-2">
+                                <span class="RuiButton__label">Remove From Cart</span>
+                            </button>
+                            <button
+                                class="RuiButtonBase RuiButton RuiButton--outlined RuiButton--outlinedPrimary RuiButton--textSizeSmall m-2">
+                                <span class="RuiButton__label">Move to wishlist</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="eCart__total">
+                <div class="RuiPaper RuiPaper--elevation1 RuiPaper--rounded">
+                    <div class="RuiCard__content">
+                        <h4 class="RuiTypography__h4">Price Details</h4>
+                        <hr>
+                        <div class="eCart__total__price">
+                            <p class="RuiTypography__body1">Price (2 items)</p>
+                            <p class="RuiTypography__body2">₹2000</p>
+                        </div>
+                        <div class="eCart__total__price">
+                            <p class="RuiTypography__body1">Discount</p>
+                            <p class="RuiTypography__body2">- ₹500</p>
+                        </div>
+                        <div class="eCart__total__price">
+                            <p class="RuiTypography__body1">Delivery Charges</p>
+                            <p class="RuiTypography__body2">₹100</p>
+                        </div>
+                        <hr>
+                        <div class="eCart__total__price">
+                            <h5 class="RuiTypography__h5">Total Amount</h5>
+                            <h5 class="RuiTypography__h5">₹1600</h5>
+                        </div>
+                        <hr>
+                        <p class="RuiTypography__body1">You will save ₹400 on this order</p>
+
+                        <button
+                            class="RuiButtonBase RuiButton RuiButton--contained RuiButton--containedPrimary RuiButton--textSizeSmall">
+                            <span class="RuiButton__label">Place Order</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

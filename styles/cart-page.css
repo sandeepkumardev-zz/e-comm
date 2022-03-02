@@ -1,0 +1,95 @@
+.eCartHeader__title {
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.eCartItems {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.eCartProductList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.eCart__card {
+  height: 24rem;
+}
+.eCart__cardImage {
+  height: 100%;
+}
+.eCart__cardBody {
+  margin: 1rem 2rem 0 2rem;
+  position: relative;
+}
+.eCart__cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.eCart__cardBody__title {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.eCart__cardBody__title h3 {
+  font-weight: lighter;
+}
+.eCart__cardBody__price {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+.eCart__cardBody__price span {
+  text-decoration: line-through;
+}
+.eCart__cardAction {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .eCart__card {
+    height: auto;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .eCart__cardImage img {
+    width: 100%;
+  }
+  .eCart__cardBody {
+    position: inherit;
+  }
+  .eCart__cardAction {
+    margin-top: 2rem;
+    position: inherit;
+  }
+}
+
+/* cart total */
+.eCart__total {
+  max-width: 50rem;
+  width: 100%;
+  margin: 1rem;
+}
+.RuiCard__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.eCart__total__price {
+  display: flex;
+  justify-content: space-between;
+}
+.eCart__total__price h5 {
+  font-weight: bold;
+}
