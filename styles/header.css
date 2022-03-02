@@ -6,8 +6,10 @@
   display: flex;
   align-items: center;
 }
-.eHeader__content h3 {
+.eHeader__content a {
   white-space: nowrap;
+  text-decoration: none;
+  color: inherit;
 }
 .eHeader__content .RuiButtonBase {
   display: none;
